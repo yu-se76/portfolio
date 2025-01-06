@@ -1,62 +1,166 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポートフォリオ</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Portfolio</h1>
-      <h2>自己紹介</h2>
-      <p>近畿圏の高専４年生メカトロニクスコース（19歳）</p>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // すべてのセクションを非表示にする
+            });
+            document.getElementById(id).style.display = 'block'; // 選択したセクションを表示する
+        }
+        window.onload = () => {
+            showSection('portfolio'); // 最初に表示するセクション
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('introduction')">Introduction</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('works')">Works</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('hobby')">Hobby</a></li>
+        </ul>
+    </nav>
 
-      <h2>Works</h2>
-      
-      <h3>３年次</h3>
-      <h4>特別研究</h4>
-      <p>
-        3年次に作成した版画です。不動明王をモデルに作成しました。
-      </p>
-      <p>
-        <h4>CAD設計</h4>
-      </p>
-      <p>
-       リンク機構を使用したアームロボットのCAD設計図になります。
-      </p>
-      <div class="img-2col-container">
-        <div>
-          <img src="work-01.jpg" />
+    <div class="container">
+        <div id="portfolio" class="section">
+            <div class="large-text-container">
+                Portfolio
+            </div>
+            <div class="large-text-container right">
+                <p onclick="showSection('introduction')">Introduction </p>
+                <p onclick="showSection('works')">Works</p>
+                <p onclick="showSection('skills')">Skills</p>
+                <p onclick="showSection('hobby')">Hobby</p>
+            </div>
         </div>
-        <div>
-          <img src="work-02.jpg" />
+
+        <div id="introduction" class="section" style="display: none;">
+            <h1>Introduction</h1>
+            <p>近畿圏の高専４年生メカトロニクスコース（19歳）</p>
+            <p>現在は大学編入に向けて勉強しています。</p>
         </div>
-      </div>
-      <h3>4年次</h3>
-      <h4>基礎研究</h4>
-       <p>寿司を提供するロボット　寿司パックンを作成しました。</p>
-       <p>機械班としてパックンフラワーの外観を作成しました。設計図、外観図を示す。</p>
-       
-      <h2>Skills</h2>
-      <p>
-        授業やクラブ活動、文化祭活動、趣味を含めて利用経験のあるハードウェアやソフトウェアの一覧です。習熟度の目安として累積使用時間が10時間以上のものを「★」、30時間以上を「★★」、100時間以上を「★★★」と表記しています。
-      </p>
-      <ul>
-        <li>Fusion 360（3D-CAD）</li>
-        <li>汎用旋盤</li>
-        <li>ボール盤</li>
-        <li>フライス盤</li>
-        <li>Arduino</li>
-        <li>電子工作（ブレッドボード）</li>
-        <li>Python</li>
-      </ul>
-      
-       <h2>hobby</h2>
-      <p>サッカー　音楽　絵</p>
-      <h4>サッカー</h4>
-      <p>応援しているチーム：Liverpool</p>
-      <p>週末にはLiverpoolの試合を観戦しています。深夜遅い時間ではハイライトを見ています。</p>
+
+        <div id="works" class="section" style="display: none;">
+            <h1>Works</h1>
+            <h2>1年次</h2>
+            <h3>美術</h3>
+            <div class="img-2col-container">
+            <div>
+              <img src="karenda-0.jpg" />
+            </div>
+            <div>
+              <img src="bijutsu.jpg" />
+            </div>
+          </div>
+            <h2>3年次</h2>
+            <h3>特別研究</h3>
+            <p>3年次に作成した版画です。不動明王をモデルに作成しました。</p>
+            <div class="img-2col-container">
+                <div>
+                    <img src="tokken3.jpg" />
+                </div>
+                <div>
+                    <img src="tokken2.jpg" />
+                </div>
+            </div>
+            <h3>CAD設計</h3>
+            <p>CreoやFusion 360の設計ソフトを学びました。</p>
+            <div class="img-2col-container">
+                <div>
+                    <img src="creo.PNG" />
+                </div>
+                <div>
+                    <img src="fusion360.png" />
+                </div>
+            </div>
+            <h2>4年次</h2>
+            <h3>基礎研究</h3>
+            <ul>題：寿司をお客様に提供するロボットの作製</ul>
+            <ul>期間：半年間</ul>
+            <ul>役割：機械班</ul>
+            <ul>人数：6人</ul>
+              <p>　マリオの世界観から、パックンフラワーをモチーフにした寿司パックンを作成しました。私は機械班としてパックンの外観部分を作製しました。外観図、設計図を示します。</p>
+            <div class="img-2col-container">
+                <div>
+                    <img src="pakkun.jpg" />
+                </div>
+                <div>
+                    <img src="pakkun1.png" />
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="section" style="display: none;">
+            <h1>Skills</h1>
+            <p>10時間以上「★」、30時間以上「★★」、100時間以上「★★★」</p>
+            <h3>プログラミング言語</h3>
+            <ul>
+                <li><a href="https://ja.wikipedia.org/wiki/C言語">c言語</a>「★」</li>
+            </ul>
+            <h3>設計ソフト</h3>
+            <ul>
+                <li><a href="https://www.autodesk.com/jp">fusion360</a>「★★★」</li>
+                <li><a href="https://www.ptc.com/ja">creo</a>「★★」</li>
+            </ul>
+            <h3>工作機械</h3>
+            <ul>
+                <li><a href="https://ja.wikipedia.org/wiki/ボール盤">ボール盤</a>「★★」</li>
+                <li><a href="https://ja.wikipedia.org/wiki/汎用旋盤">汎用旋盤</a>「★」</li>
+                <li><a href="https://ja.wikipedia.org/wiki/フライス盤">フライス盤</a>「★」</li>
+            </ul>
+            <h3>回路</h3>
+            <ul>
+                <li><a href="https://ja.wikipedia.org/wiki/電子工作">電子工作</a>「★」</li>
+                <li><a href="https://www.arduino.cc/">Arduino</a>「★」</li>
+                <li><a href="">kiCad</a>「★」</li>
+
+            </ul>
+            <h3>software</h3>
+            <ul>
+                <li><a href="https://www.blender.jp/">blender</a>「★★」</li>
+                <li><a href="https://krita.org/ja/">krita</a>「★」</li>
+                <li><a href="https://ja.wikipedia.org/wiki/Word">Word</a>「★★」</li>
+                <li><a href="https://ja.wikipedia.org/wiki/Ecxcel">Ecxcel</a>「★★」</li>
+                <li><a href="https://ja.wikipedia.org/wiki/PowerPoint">PowerPoint</a>「★★」</li>
+
+
+
+            </ul>
+        </div>
+
+        <div id="hobby" class="section" style="display: none;">
+            <h1>Hobby</h1>
+            <h2>soccer</h2>
+            <p>　プレミアリーグを観戦しています。夜遅い時間はハイライトを視聴します。応援しているクラブはリヴァプールです。今季(24/25)優勝目前にあります。</p>
+            <div>
+                <a href="https://www.fotmob.com/ja/leagues/47/table/premier-league">
+                    <div class="img-2col-container">
+                        <img src="premiere league.png" />
+                    </div>
+                </a>
+            </div>
+            <h2>music</h2>
+            <li>BLANKEY JET CITY</li>
+            <li>THEE MICHELLE GUN ELEPHANT</li>
+            <li>ゆらゆら帝国</li>
+            <li>くるり</li>
+            <li>MEGA SHINNOSUKE</li>
+            <li>サカナクション</li>
+            <h2>manga</h2>
+            <li>キングダム</li>
+            <li>チェンソーマン</li>
+            <li>ダンダダン</li>
+            <li>ナルト</li>
+            <p>他にもイラストを書くことや服が好きです。</p>
+        </div>
     </div>
-  </body>
+</body>
 </html>

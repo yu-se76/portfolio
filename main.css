@@ -1,33 +1,105 @@
-h1 {
-    font-size: 2.5em; /* H1のフォントサイズを設定 */
-}
-
-h2 {
-    font-size: 1.75em; /* H2のフォントサイズを設定 */
-}
-
-h3 {
-    font-size: 1.5em; /* H3のフォントサイズを設定 */
-}
-
-h4 {
-    font-size: 1.25em; /* H4のフォントサイズを設定 */
-}
-
-h5 {
-    font-size: 1em; /* H5のフォントサイズを設定 */
-}
-
-h6 {
-    font-size: 0.875em; /* H6のフォントサイズを設定 */
-}
-
 body {
-  display: flex; /* 画面全体の配置を調整するための設定 */
-  justify-content: center; /* コンテンツを中央に配置 */
-  padding: 0px 10px; /* 画面の上下に 0px の余白、左右に10pxの余白を設定 */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #BFD5FF;
 }
 
+
+.large-text-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: left;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.content {
+  margin-left: 300px; /* 文字部分の右にスペースを作る例 */
+}
+
+.large-text-container.right {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  padding: 20px;
+  color: #333;
+  font-size: 4rem; /* フォントサイズを調整 */
+  font-weight: bold;
+  text-align: right;
+}
+
+
+
+.large-text-container.right p {
+  margin: 0; /* 段落間の余白を削除 */
+  line-height: 1.5; /* 行間を調整 */
+}
+
+
+nav {
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 80px auto 0; /* 上部のマージンはナビゲーションバーのスペース */
+    padding: 20px;
+    background-color: #BFD5FF;
+    box-shadow:none; 
+}
+
+h1, h2, h3, h4 {
+    margin: 20px 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin-bottom: 10px;
+    }
+}
 .container {
   max-width: 768px; /* コンテンツの最大幅を768pxに制限 */
   width: 100%; /* コンテンツが幅いっぱいに広がるように設定 */
@@ -61,20 +133,4 @@ img {
   object-fit: cover; /* アスペクト比を維持しつつ、指定サイズに収める */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .img-2col-container {
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .img-2col-container > div {
-    width: 100%;
-  }
-
-  .img-2col-container img {
-    height: 250px; /* モバイル表示時は少し小さく */
-  }
 }
