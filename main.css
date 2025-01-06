@@ -134,3 +134,98 @@ img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .large-text-container {
+    font-size: 2.5rem; /* フォントサイズを小さく調整 */
+    top: 30%; /* 位置を調整 */
+    left: 5%; /* 左端に寄りすぎないよう調整 */
+    padding: 10px; /* パディングを減らす */
+  }
+
+  .large-text-container.right {
+    font-size: 2rem; /* フォントサイズを調整 */
+    right: 5%; /* 右端に寄りすぎないよう調整 */
+    padding: 10px; /* パディングを減らす */
+  }
+
+  nav ul {
+    flex-direction: column; /* 縦並びにする */
+    align-items: center; /* 中央揃え */
+  }
+
+  nav li {
+    margin-bottom: 10px; /* 各項目の間隔を調整 */
+  }
+
+  .img-2col-container {
+    flex-direction: column; /* 画像を縦並びにする */
+  }
+
+  .img-2col-container img {
+    height: auto; /* 画像の高さを自動に設定 */
+  }
+
+  .container {
+    padding: 10px; /* コンテンツの余白を減らす */
+  }
+}
+
+@media (max-width: 480px) {
+  .large-text-container {
+    font-size: 2rem; /* さらにフォントサイズを小さく */
+    top: 20%; /* 位置を調整 */
+  }
+
+  .large-text-container.right {
+    font-size: 1.8rem; /* フォントサイズを小さく調整 */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem; /* 見出しのサイズを小さく調整 */
+  }
+
+  nav a {
+    font-size: 0.9rem; /* ナビゲーションリンクの文字サイズを調整 */
+  }
+}
+
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* 横並びに設定 */
+    overflow-x: auto; /* 横スクロール可能に */
+    white-space: nowrap; /* 改行を防止 */
+    justify-content: flex-start; /* 横並びを左寄せ */
+  }
+
+  nav li {
+    margin-right: 10px; /* 項目間の間隔を調整 */
+    margin-bottom: 0; /* 縦方向の間隔をリセット */
+  }
+
+  nav a {
+    font-size: 0.9rem; /* フォントサイズを調整 */
+    padding: 5px 10px; /* クリックしやすいようパディングを追加 */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: row; /* 横並びを維持 */
+    overflow-x: auto; /* 横スクロール可能に */
+  }
+
+  nav li {
+    margin-right: 8px; /* 項目間の間隔を調整 */
+  }
+
+  nav a {
+    font-size: 0.8rem; /* 小画面でさらにフォントサイズを調整 */
+  }
+}
